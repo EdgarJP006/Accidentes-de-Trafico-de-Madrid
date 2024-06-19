@@ -1,7 +1,7 @@
-# Padrão README multilíngue
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/jonatasemidio/multilanguage-readme-pattern/blob/master/README.md)
-[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/jonatasemidio/multilanguage-readme-pattern/blob/master/README.pt-br.md)
-[![en](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/jonatasemidio/multilanguage-readme-pattern/blob/master/README.es.md)
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](https://github.com/EdgarJP006/Accidentes-de-Trafico-de-Madrid/blob/main/locale/README-en.md)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/EdgarJP006/Accidentes-de-Trafico-de-Madrid/blob/main/locale/README-pt.md)
+[![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/EdgarJP006/Accidentes-de-Trafico-de-Madrid/blob/main/README.md)
+[![zh-CN](https://img.shields.io/badge/lang-zh--br-red.svg)](https://github.com/EdgarJP006/Accidentes-de-Trafico-de-Madrid/blob/main/locale/README-zh_CN.md)
 
 ## Proposta de um sistema baseado em computação flexível para análise de acidentes automobilísticos
 ## 1. Introdução
