@@ -1,0 +1,129 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CONTENIDO
+
+\section{Resumen}
+Los accidentes automovilísticos en las grandes ciudades representan un problema significativo de seguridad vial y salud pública. El presente estudio propone un sistema para el análisis de accidentes automovilísticos en Madrid, España, abarcando el periodo de 2019 a 2023. El objetivo principal es identificar patrones y factores contribuyentes a estos accidentes mediante técnicas de soft computing, facilitando la toma de decisiones y la implementación de medidas de seguridad.
+
+De manera general, el sistema emplea un modelo de Árboles de Decisión, elegido por su capacidad para manejar variables categóricas y continuas, y por su facilidad de interpretación. Este modelo permite identificar con precisión los patrones y factores que influyen en los accidentes de tráfico.
+
+En términos más específicos, el sistema incluye una funcionalidad de zoom que muestra detalles específicos de las zonas con mayor probabilidad de accidentes. Esta característica es especialmente útil para trazar rutas más seguras, beneficiando a turistas y residentes por igual.
+
+La metodología empleada abarca desde la limpieza y preparación de datos hasta el desarrollo de una interfaz web intuitiva para la visualización de los resultados. Esta integración completa permite una comprensión clara y detallada de los datos, promoviendo acciones preventivas eficaces.
+
+En conclusión, el sistema propuesto constituye una herramienta integral y eficaz para el análisis y prevención de accidentes automovilísticos en Madrid, basándose en el uso avanzado de técnicas de soft computing.
+
+\section{Introducción}
+Los accidentes automovilísticos en las grandes ciudades representan un desafío importante para la seguridad vial y la salud pública. En particular, Madrid, una de las ciudades más grandes y transitadas de España, ha experimentado un número significativo de accidentes de tráfico en los últimos años \cite{doi:10.1080/15389588.2012.726384}. El análisis y la prevención de estos accidentes son cruciales para mejorar la seguridad de conductores, pasajeros y peatones. Con este objetivo, proponemos un sistema basado en técnicas de soft computing para analizar los accidentes automovilísticos en Madrid desde 2019 hasta 2023 \cite{monedero2021road}.
+
+El sistema propuesto utiliza un modelo de Árboles de Decisión para identificar patrones y factores contribuyentes a los accidentes de tráfico. Los Árboles de Decisión son adecuados para este tipo de análisis debido a su capacidad para manejar tanto variables categóricas como continuas, y por su facilidad de interpretación . Este modelo permite no solo identificar los factores que influyen en los accidentes, sino también estimar la probabilidad de que ocurran en ubicaciones específicas. Esta probabilidad se calcula considerando diversas variables de entrada, como condiciones meteorológicas, densidad de tráfico, y características geográficas .
+
+Para visualizar estos datos, el sistema incluye una funcionalidad que permite mostrar los puntos críticos de accidentes en un mapa de la ciudad. Estos puntos se determinan juntando los posibles accidentes alrededor de coordenadas específicas, facilitando la identificación de zonas con mayor probabilidad de accidentes \cite{fayyad1996data}. Esta información es esencial para la planificación de medidas preventivas y la optimización de rutas seguras, especialmente para turistas y residentes que no están familiarizados con las áreas más peligrosas de Madrid.
+
+El proceso de desarrollo del sistema consta de varias etapas. Primero, se obtienen y preparan los datos de accidentes de fuentes oficiales como la Dirección General de Tráfico (DGT) y el Instituto Nacional de Estadística (INE) \cite{dgt}. Luego, los datos se limpian y preprocesan para eliminar valores faltantes, convertir variables categóricas a numéricas y normalizar los datos \cite{han2011data}. Posteriormente, el modelo de Árboles de Decisión se entrena con los datos preprocesados y su rendimiento se evalúa utilizando métricas como la precisión, la exhaustividad y la puntuación F1 \cite{powers2020evaluation}. Finalmente, el modelo entrenado se utiliza para predecir la probabilidad de accidentes y los puntos críticos en el mapa de Madrid.
+
+En conclusión, el sistema propuesto proporciona una herramienta integral para el análisis y prevención de accidentes automovilísticos en Madrid. Utilizando técnicas avanzadas de soft computing, este sistema permite una comprensión detallada de los factores que contribuyen a los accidentes y facilita la implementación de medidas de seguridad efectivas.
+\section{Propuesta}
+La aplicación de Ruta Segura por Madrid es una herramienta diseñada para optimizar la seguridad vial en la ciudad. Utilizando técnicas de soft computing y análisis de datos, la aplicación identifica y mapea las zonas con mayor probabilidad de accidentes. Los usuarios pueden ingresar su destino y recibir recomendaciones de rutas que evitan estos puntos críticos, proporcionando un viaje más seguro. Además, la aplicación ofrece información en tiempo real sobre condiciones de tráfico y posibles incidentes, permitiendo a los conductores y peatones tomar decisiones informadas y reducir el riesgo de accidentes.
+\figura{Figuras/trackingMadrid.png}{width=1\textwidth}{Sistema de predicción de la ruta más segura}{fig:Imagen1} 
+
+\section{Conceptos básicos}
+En este apartado haremos una breve revisión de los conceptos primordiales del conjunto de datos de Accidentes de tráfico en la Ciudad de Madrid registrados por la Policía Municipal. 
+El conjunto de datos proporcionado contiene información sobre los accidentes de tráfico registrados por la Policía Municipal de la Ciudad de Madrid. Cada registro corresponde a un accidente e incluye detalles sobre las personas implicadas. Es importante tener en cuenta que a partir del año 2019, la estructura de los datos ha variado y se detalla en la documentación asociada. Los registros anteriores a 2019 solo incluyen accidentes con heridos o daños al patrimonio municipal. Además, los datos son provisionales hasta seis meses después del año en cuestión. Sin embargo, no se proporciona información a nivel de barrio, y no se incluyen registros de testigos en ningún año. Para más detalles, se puede consultar el enlace: \href{https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=7c2843010d9c3610VgnVCM2000001f4a900aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default}{Datos de accidentes en Madrid}.
+
+Variables de entrada
+\begin{itemize}
+\item \textbf{fecha}: Fecha del accidente
+\item \textbf{hora}: Hora del accidente
+\item \textbf{localizacion}: Localización del accidente
+\item \textbf{cod-distrito}: Código del distrito
+\item \textbf{distrito}: Distrito
+\item \textbf{tipo-accidente}: Tipo de accidente
+\item \textbf{estado-meteorológico}: Estado meteorológico
+\item \textbf{tipo-vehiculo}: Tipo de vehículo
+\item \textbf{tipo-persona}: Tipo de persona
+\item \textbf{rango-edad}: Rango de edad
+\item \textbf{coordenada-x-utm}: Coordenada X en UTM
+\item \textbf{coordenada-y-utm}: Coordenada Y en UTM
+\item \textbf{positiva-alcohol}: Resultado positivo para alcohol
+\item \textbf{positiva-droga}: Resultado positivo para drogas
+\end{itemize}
+\figura{Figuras/Imagen2.png}{width=0.9\textwidth}{Tipos de accidentes en Madrid 2019-2023}{fig:Imagen2} 
+
+Variables de Salida:
+
+\begin{itemize}
+\item \textbf{Probabilidad-de-accidente}: Estimación de la probabilidad de que ocurra un accidente en una ubicación específica, considerando las variables de entrada.
+\item \textbf{Puntos-críticos-de-accidentes}: Identificación de zonas con mayor probabilidad de accidentes, basados en la probabilidad de accidente calculada.
+\end{itemize}
+
+\section{Construcción del Modelo de Análisis}
+El sistema utiliza un modelo de Árboles de Decisión para analizar los datos de accidentes. Este algoritmo es adecuado para identificar patrones y factores contribuyentes en los accidentes de tráfico, ya que es fácil de interpretar y puede manejar tanto variables categóricas como continuas.
+
+\subsection{Implementación del Modelo}
+Implementamos un modelo de Árboles de Decisión utilizando Scikit-learn en Python para predecir la probabilidad de accidentes de tráfico en la Ciudad de Madrid. Comenzamos transformando variables categóricas a numéricas y luego convertimos las coordenadas UTM a geográficas para ubicar los accidentes en el mapa. Después de verificar y limpiar los datos, dividimos el conjunto en entrenamiento y prueba. El modelo se entrena y evalúa con una precisión del 80\%. Utilizamos estas predicciones para agregar una capa de probabilidad de accidente al DataFrame original. Finalmente, creamos un mapa interactivo de Folium centrado en Madrid con un grupo de marcadores que muestra la ubicación de los posibles accidentes.
+
+\subsection{Esquema del Proceso de Análisis}
+\begin{enumerate}
+\item \textbf{Obtención y Preparación de Datos:} Los datos de accidentes se obtienen de fuentes como la Dirección General de Tráfico (DGT) o el Instituto Nacional de Estadística (INE).
+
+\item \textbf{Limpieza y Preprocesamiento:} Los datos se limpian y preprocesan para eliminar valores faltantes, convertir variables categóricas a numéricas y normalizar los datos.
+
+\item \textbf{Entrenamiento del Modelo:} El modelo de Árboles de Decisión se entrena con los datos preprocesados.
+
+\item \textbf{Evaluación del Modelo:} Se evalúa el rendimiento del modelo utilizando métricas como la precisión, la exhaustividad y la puntuación F1.
+
+\item \textbf{Predicción:} El modelo entrenado se utiliza para predecir la probabilidad de accidente y los puntos críticos de accidentes.
+\end{enumerate}
+
+\subsection{Resultados y Análisis}
+
+El sistema genera dos tipos de resultados:
+\begin{itemize}
+\item \textbf {Mapa de Probabilidad de Accidentes:}  Este mapa muestra la probabilidad de accidente en diferentes zonas de Madrid, visualizando las áreas de mayor riesgo.
+\item \textbf {Mapa de Puntos Críticos:}  Este mapa identifica las zonas con mayor concentración de accidentes, permitiendo a las autoridades tomar medidas para mejorar la seguridad vial.
+\end{itemize}
+\section{Aplicación}
+\subsection{Caso de uso: Madrid}
+El sistema se aplica a los datos de accidentes automovilísticos en Madrid, España, desde 2019 hasta 2023. Se utiliza un conjunto de datos de accidentes reales, incluyendo información sobre la fecha, hora, ubicación, tipo de accidente, condiciones climáticas, tipo de vehículo y tipo de persona involucrada.
+\section{Visualización de Resultados}
+Esta imagen muestra los accidentes predichos por zona. Como el algoritmo predice por coordenada, se optó por mostrarlos en puntos que juntan los posibles accidentes a su alrededor.
+\figura{Figuras/Imagen3.png}{width=1\textwidth}{Tipos de accidentes en Madrid 2019-2023}{fig:Imagen3} 
+Esta imagen muestra los accidentes predichos por zona. Como el algoritmo predice por coordenada, se optó por mostrarlos en puntos que juntan los posibles accidentes a su alrededor.
+
+\figura{Figuras/Imagen4.png}{width=1\textwidth}{Cluster de accidentes en Madrid 2019-2023}{fig:Imagen4} 
+La aplicación también permite hacer zoom y mostrar más detalles en cuanto a los lugares más posibles en los que pueden haber accidentes automovilísticos. Esto podría ayudar a trazar rutas más seguras para las personas, sobre todo para los turistas que pueden conocer menos los movimientos de las calles de Madrid.
+
+Analizando estos clusters, podemos determinar las zonas con mayor incidencia de accidentes en diferentes horas y días de la semana. Utilizando esta información, la aplicación puede alertar a los conductores sobre las áreas de alto riesgo y sugerir rutas alternativas más seguras durante los periodos críticos.
+
+La aplicación no solo tomaría en cuenta la ubicación de los accidentes, sino también la temporalidad. Mediante el análisis de patrones horarios y diarios, la aplicación podría identificar los momentos de mayor riesgo en cada zona. Por ejemplo, si se observa que una intersección tiene una alta frecuencia de accidentes los viernes por la noche, la aplicación puede aconsejar a los usuarios evitar esa área durante ese periodo específico. Esta funcionalidad permite a los conductores planificar sus rutas de manera pro-activa y reducir su exposición a situaciones peligrosas.
+
+
+\figura{Figuras/Imagen5.png}{width=1\textwidth}{Sección de áreas de accidentes}{fig:Imagen5} 
+Además de sugerir rutas más seguras, la aplicación podría ofrecer características adicionales como alertas en tiempo real sobre accidentes recientes, información sobre condiciones de tráfico y la integración con sistemas de navegación para ofrecer desvíos instantáneos en caso de incidentes. Con estas capacidades, la aplicación no solo mejora la seguridad individual de los conductores, sino que también contribuye a una gestión más eficiente del tráfico en la ciudad, reduciendo la congestión y potencialmente disminuyendo el número total de accidentes.
+\section{Limitaciones del Estudio}
+El estudio tiene algunas limitaciones:
+\begin{itemize}
+\item \textbf Disponibilidad de Datos : La calidad y cantidad de datos disponibles pueden afectar la precisión del modelo.
+\item \textbf Generalización : El modelo puede no ser generalizable a otras ciudades o regiones con diferentes características.
+\item \textbf Factores No Considerados : El modelo no considera todos los factores que pueden contribuir a los accidentes, como la fatiga del conductor o el estado del vehículo.
+\end{itemize}
+
+
+\section{Propuestas para Trabajo Futuro}
+\begin{itemize}
+\item \textbf	Ampliar el Conjunto de Datos : Incluir más datos de accidentes de diferentes ciudades o regiones para mejorar la generalización del modelo.
+\item \textbf	Incorporar Nuevos Factores : Considerar factores adicionales que pueden influir en la probabilidad de accidente, como el estado del vehículo o la fatiga del conductor.
+\item \textbf	Desarrollar un Sistema de Alerta : Implementar un sistema de alerta que notifique a los usuarios sobre las zonas de mayor riesgo de accidentes.
+\end{itemize}
+
+\section{Conclusión}
+Hemos propuesto un sistema para el análisis de accidentes automovilísticos en Madrid, España, utilizando técnicas de soft computing. Este modelo se entrenó con datos transformados y georreferenciados, proporcionando predicciones sobre la probabilidad de accidentes en diferentes ubicaciones y momentos.
+
+Además de la implementación del modelo predictivo, llevamos a cabo un proceso de limpieza y preparación de datos. Este proceso incluyó la transformación de variables categóricas a numéricas, la conversión de coordenadas UTM a geográficas y la eliminación de valores no válidos. Estos pasos fueron para garantizar la calidad y fiabilidad de los datos utilizados en el modelo, permitiendo obtener resultados útiles para el análisis.
+
+Finalmente, generamos una interfaz web accesible para la presentación de resultados. Esta interfaz permite a los usuarios visualizar mapas interactivos de la Ciudad de Madrid con los clusters de accidentes identificados y las predicciones de zonas de riesgo. Además, la aplicación proporciona sugerencias de rutas más seguras basadas en patrones temporales de accidentes, lo que facilita la toma de decisiones informadas para mejorar la seguridad vial. En conjunto, este sistema representa una herramienta para el análisis y prevención de accidentes de tráfico, contribuyendo a una conducción más segura en Madrid.
+
+
+
+
+
