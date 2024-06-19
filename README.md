@@ -39,7 +39,7 @@ El sistema genera dos tipos de resultados:
 ### 4.1. Ejemplo Práctico
 El sistema se aplica a los datos de accidentes automovilísticos en Madrid, España, desde 2019 hasta 2023. Se utiliza un conjunto de datos de accidentes reales, incluyendo información sobre la fecha, hora, ubicación, tipo de accidente, condiciones climáticas, tipo de vehículo y tipo de persona involucrada.
 ### 4.2. Visualización de Resultados
- 
+![Esta imagen muestra los accidentes predichos por zona]("Trans) 
 1717399581495
 Esta imagen muestra los accidentes predichos por zona. Como el algoritmo predice por coordenada, se optó por mostrarlos en puntos que juntan los posibles accidentes a su alrededor.
  
