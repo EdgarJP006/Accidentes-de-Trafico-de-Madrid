@@ -2,6 +2,7 @@
 ## 1. Introducción
 El sistema propuesto tiene como objetivo analizar los accidentes automovilísticos en Madrid, España, desde 2019 hasta 2023. Utilizando técnicas de soft computing, el sistema permitirá identificar patrones y factores contribuyentes a los accidentes, facilitando la toma de decisiones y la implementación de medidas de seguridad.
 ## 2. Selección de Variables
+El modelo está basado en un periodo en especifico, para usar otros años busar los datasets en: https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=7c2843010d9c3610VgnVCM2000001f4a900aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default
 Variables de Entrada :
 
 •	fecha : Fecha del accidente \
