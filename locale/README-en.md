@@ -50,7 +50,7 @@ The system is applied to automobile accident data in Madrid, Spain, from 2019 to
 
 1717399581495
 This image shows the predicted accidents by zone. As the algorithm predicts by coordinate, it was chosen to display them in points that gather the possible accidents around them.
- This image shows the predicted features per zone](https://github.com/EdgarJP006/Accidentes-de-Trafico-de-Madrid/blob/2c7103bf227e00fe7e68e58e39f89864ec0901bc/Transporte%2C%20Localizaci%C3%B3n%20y%20Patrullaje/Figuras/Imagen5.png) 
+ ![This image shows the predicted features per zone](https://raw.githubusercontent.com/EdgarJP006/Accidentes-de-Trafico-de-Madrid/main/Transporte%2C%20Localizaci%C3%B3n%20y%20Patrullaje/Figuras/Imagen5.png) 
 
 
 1717399594301
