@@ -46,11 +46,11 @@ O sistema gera dois tipos de resultados: \
 ### 4.1. Exemplo prático
 O sistema é aplicado a dados de acidentes de carro em Madri, Espanha, de 2019 a 2023. É usado um conjunto de dados de acidentes reais, incluindo informações sobre data, hora, local, tipo de acidente, condições climáticas, tipo de veículo e tipo de pessoa envolvida.
 ### 4.2 Visualização dos resultados
-![Esta imagem mostra os acidentes previstos por zona] (https://github.com/EdgarJP006/Accidentes-de-Trafico-de-Madrid/blob/2c7103bf227e00fe7e68e58e39f89864ec0901bc/Transporte%2C%20Localizaci%C3%B3n%20y%20Patrullaje/Figuras/Imagen3.png) 
+![Esta imagem mostra os acidentes previstos por zona](https://github.com/EdgarJP006/Accidentes-de-Trafico-de-Madrid/blob/2c7103bf227e00fe7e68e58e39f89864ec0901bc/Transporte%2C%20Localizaci%C3%B3n%20y%20Patrullaje/Figuras/Imagen3.png) 
 
 1717399581495
 Esta imagem mostra os acidentes previstos por zona. Como o algoritmo faz a previsão por coordenadas, optou-se por exibi-las em pontos que reúnem os possíveis acidentes ao redor delas.
- Esta imagem mostra os recursos previstos por zona](https://github.com/EdgarJP006/Accidentes-de-Trafico-de-Madrid/blob/2c7103bf227e00fe7e68e58e39f89864ec0901bc/Transporte%2C%20Localizaci%C3%B3n%20y%20Patrullaje/Figuras/Imagen5.png) 
+ ![This image shows the predicted features per zone](https://raw.githubusercontent.com/EdgarJP006/Accidentes-de-Trafico-de-Madrid/main/Transporte%2C%20Localizaci%C3%B3n%20y%20Patrullaje/Figuras/Imagen5.png) 
  
 1717399594301
 
